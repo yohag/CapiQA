@@ -39,7 +39,7 @@ public class caso001_Flujo_Completo {
     public void ejecutarBrowser() {
         tools = new tools();
         try {
-            tools.setUrl("https://ventasdesarrolloafp.com/");
+            tools.setUrl("https://qa.apiafp.capital/");
             tools.init();
             driver = tools.getDriver();
             System.out.println("Se ejecuto el ChromeDriver e inicia el proceso de ejecución");
@@ -59,7 +59,7 @@ public class caso001_Flujo_Completo {
         if (continuar) {
             try {
                 System.out.println("Pasamos al paso 1");
-                Thread.sleep(2000);
+                Thread.sleep(1000);
                 tools.screenshot("scripts", Caso , _method);
                 objIndex.btnComenzar.click();
                 Thread.sleep(1000);
@@ -103,7 +103,7 @@ public class caso001_Flujo_Completo {
                 System.out.println("Pasamos al paso 3");
                 Thread.sleep(1000);
                 tools.screenshot("scripts", Caso , _method);
-                objIndex.textRut.sendKeys(variables.rutcliente);
+                objIndex.textRut.sendKeys(variables.rut);
                 Thread.sleep(1000);
             } catch (Exception e) {
                 continuar = false;
@@ -201,7 +201,7 @@ public class caso001_Flujo_Completo {
     }
     
     
-/*  @Test(priority = 8)
+  @Test(priority = 8)
     public void EleccionFondo() {
         if (continuar) {
             try {
@@ -222,8 +222,8 @@ public class caso001_Flujo_Completo {
         }
     }  
     
-*/
 
+  /*
     @Test(priority = 9)
     public void fondoRecomendado() {
         if (continuar) {
@@ -252,7 +252,8 @@ public class caso001_Flujo_Completo {
 
         }
     }  
-
+*/
+ 
     @Test(priority = 9)
     public void ContinuarFondo() {
         if (continuar) {
@@ -318,13 +319,13 @@ public class caso001_Flujo_Completo {
     }
     
     
-    @Test(priority = 19)
+/*    @Test(priority = 19)
     public void confirmar() {
         if (continuar) {
             try {
                 System.out.println("Pasamos al paso 11");
                 Thread.sleep(3000);
-                objIndex.btnConfirmar.click();
+                objIndex.btnFinalizar.click();
                 tools.screenshot("scripts", Caso , _method);
                 Thread.sleep(3000);
             } catch (Exception e) {
@@ -337,7 +338,7 @@ public class caso001_Flujo_Completo {
             tools.skipPreviousMethod();
         }
     }
-
+*/
     @Test(priority = 20)
     public void comisiones() {
         if (continuar) {

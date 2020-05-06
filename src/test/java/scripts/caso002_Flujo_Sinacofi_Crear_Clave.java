@@ -17,9 +17,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.SkipException;
 
-public class caso002_Flujo_Sinacofi {
+public class caso002_Flujo_Sinacofi_Crear_Clave {
 
     tools tools;
     pageIndex objIndex;
@@ -30,6 +31,7 @@ public class caso002_Flujo_Sinacofi {
 	String _directory = "scripts";
 	String _class = Caso;
 	String _method = "";
+	WebDriver driver;
 
     boolean continuar = true;
 
@@ -37,12 +39,13 @@ public class caso002_Flujo_Sinacofi {
     public void ejecutarBrowser() {
         tools = new tools();
         try {
-            tools.setUrl("https://cambiate.afpcapital.cl/");
+            tools.setUrl("https://ventasdesarrolloafp.com/");
             tools.init();
+            driver = tools.getDriver();
             System.out.println("Se ejecuto el ChromeDriver e inicia el proceso de ejecución");
             tools.screenshot("scripts", Caso , _method);
             objIndex = new pageIndex(tools.getDriver());
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (Exception e) {
             continuar = false;
             tools.skipScript(e);
@@ -56,7 +59,7 @@ public class caso002_Flujo_Sinacofi {
         if (continuar) {
             try {
                 System.out.println("Pasamos al paso 1");
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 tools.screenshot("scripts", Caso , _method);
                 objIndex.btnComenzar.click();
                 Thread.sleep(1000);
@@ -100,7 +103,7 @@ public class caso002_Flujo_Sinacofi {
                 System.out.println("Pasamos al paso 3");
                 Thread.sleep(1000);
                 tools.screenshot("scripts", Caso , _method);
-                objIndex.textRut.sendKeys(variables.rutcliente);
+                objIndex.textRut.sendKeys(variables.rut_virtual);
                 Thread.sleep(1000);
             } catch (Exception e) {
                 continuar = false;
@@ -196,13 +199,45 @@ public class caso002_Flujo_Sinacofi {
 
         }
     }
-
-    @Test(priority = 8)
-    public void fondoRecomendado() {
+    
+    
+/*  @Test(priority = 8)
+    public void EleccionFondo() {
         if (continuar) {
             try {
                 Thread.sleep(1000);
+                System.out.println("Pasamos al paso 7");
+                objIndex.btnfondoC.click();
+                tools.screenshot("scripts", Caso , _method);
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                continuar = false;
+                tools.skipScript(e);
+                tools.stop();
+
+            }
+        } else {
+            tools.skipPreviousMethod();
+
+        }
+    }  
+    
+*/
+
+    @Test(priority = 9)
+    public void fondoRecomendado() {
+        if (continuar) {
+
+            try {
+                Thread.sleep(1000);
                 System.out.println("Pasamos al paso 8");
+                try {
+                	  for(String winHandle : driver.getWindowHandles()){
+                          driver.switchTo().window(winHandle);
+                      }
+                } catch(Exception e){
+                	System.out.println("error:" + e.getMessage());
+                }
                 objIndex.btnConoceMas.click();
                 tools.screenshot("scripts", Caso , _method);
                 Thread.sleep(3000);
@@ -216,38 +251,17 @@ public class caso002_Flujo_Sinacofi {
             tools.skipPreviousMethod();
 
         }
-    }
-    
-   /* @Test(priority = 8)
-    public void seleccionFondos() {
+    }  
+
+    @Test(priority = 9)
+    public void ContinuarFondo() {
         if (continuar) {
             try {
                 Thread.sleep(1000);
-                System.out.println("Pasamos al paso 8");
-                objIndex.fondoB.click();
-                tools.screenshot("scripts", Caso , _method);
-                Thread.sleep(3000);
-            } catch (Exception e) {
-                continuar = false;
-                tools.skipScript(e);
-                tools.stop();
-
-            }
-        } else {
-            tools.skipPreviousMethod();
-
-        }
-    }*/
-
-  @Test(priority = 9)
-    public void ContinuarFondos() {
-        if (continuar) {
-            try {
-                Thread.sleep(2000);
-                System.out.println("Pasamos al paso 9");
+                System.out.println("Pasamos al paso 7");
                 objIndex.btnContinuarFondo.click();
                 tools.screenshot("scripts", Caso , _method);
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 continuar = false;
                 tools.skipScript(e);
@@ -258,15 +272,15 @@ public class caso002_Flujo_Sinacofi {
             tools.skipPreviousMethod();
 
         }
-    }
-
+    }  
+    
     
     @Test(priority = 13)
     public void actualizarTelefono() {
         if (continuar) {
             try {
             	System.out.println("Pasamos al paso 13");
-            	objIndex.textTelefono.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.telefonoCliente);
+            	objIndex.textTelefono.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.telefono);
             	Thread.sleep(1000);
             	objIndex.textTelefono.sendKeys(Keys.TAB);
             	tools.screenshot("scripts", Caso , _method);
@@ -287,7 +301,7 @@ public class caso002_Flujo_Sinacofi {
         if (continuar) {
             try {
             	System.out.println("Pasamos al paso 14");
-            	objIndex.textEmail.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.mailCliente);
+            	objIndex.textEmail.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.email);
             	Thread.sleep(1000);
             	objIndex.textEmail.sendKeys(Keys.TAB);
             	tools.screenshot("scripts", Caso , _method);

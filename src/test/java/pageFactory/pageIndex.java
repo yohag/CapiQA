@@ -26,7 +26,7 @@ public class pageIndex {
 
     //Menu Principal
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div/button/span") 
+    @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div/button") 
     public WebElement btnComenzar;
 
     @FindBy (xpath = "//*[@id=\"root\"]/div[2]/div[4]/button")
@@ -35,25 +35,34 @@ public class pageIndex {
     @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div[2]/form/div/div[1]/div/div[1]/input")
     public WebElement textRut;
 
-    @FindBy (xpath = "//*[@id=\"root\"]/div[2]/div[2]/form/div/div[2]/button")
+    @FindBy (xpath = "//*[@id=\"root\"]/div[2]/div[2]/form/div/div[2]/button/span")
     public WebElement btnContinuar;
+    
+    @FindBy (xpath = "//*[@id=\"root\"]/div[2]/div[2]/form/div/div[2]/div/span[1]")
+    public WebElement btnayuda;
+    
+    @FindBy (xpath = "//*[@id=\"root\"]/div[3]/div[3]/div/button/i")
+    public WebElement btnayudaNroDocumento;
+    
+    @FindBy (xpath = "//*[@id=\"root\"]/div[3]/div[3]/div/button/i")
+    public WebElement text_ayuda_telefono;
 
     @FindBy (xpath = "//*[@id=\"root\"]/div[2]/div[2]/form/div/div[1]/div/div[1]/input")
     public WebElement textPassword;
 
-    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/form/div/div[2]/button/span")
+    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/form/div/div[2]/button")
     public WebElement btnContinuarPass;
 
-    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div/button")
+    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div/button/span")
     public WebElement btnContinuarEleccion;
     
-    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div[1]/div[3]/div/div/button[3]")
+    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div[1]/div[3]/div/div/button[4]")
     public WebElement btnfondoC;
     
     @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div[3]/div/button/span")
     public WebElement btnContinuarFondo;
 
-    @FindBy(xpath="//button(contains(., 'Conoce m')]")
+    @FindBy(xpath="//*[@id=\"root\"]/div[2]/div[2]/div[1]/div[2]/div/button]")
     public WebElement btnConoceMas;	
 
     //@FindBy(xpath="//*[@id=\"root\"]/div[1]/div[2]/div[1]/div[2]/div/button")
@@ -73,7 +82,7 @@ public class pageIndex {
     public WebElement btnempleadorNO;
     
     @FindBy (xpath="//*[@id=\"root\"]/div[2]/div[2]/div[1]")
-    public WebElement btnsitucionNuevo;
+    public WebElement btnTengoNuevoTrabajo;
     
     @FindBy (xpath="//*[@id=\"root\"]/div[2]/div[2]/div[2]")
     public WebElement btnsitucionCesante;
@@ -83,11 +92,11 @@ public class pageIndex {
 
     
     
-    @FindBy (xpath="//*[@id=\"Fill-1\"]")
+    @FindBy (xpath="//*[@id=\"root\"]/div[2]/div[3]/div[1]/p/a")
     public WebElement btnComisiones;
     
-    @FindBy (xpath="//*[@id=\"root\"]/div[2]/div[2]/div[2]/div[2]/button/span")
-    public WebElement btnConfirmar;
+    @FindBy (xpath="//*[@id=\"root\"]/div[2]/div[3]/div[2]/button/span")
+    public WebElement btnFinalizar;
 
   
 }

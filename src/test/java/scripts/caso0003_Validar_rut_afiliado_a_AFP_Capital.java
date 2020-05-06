@@ -38,7 +38,7 @@ public class caso0003_Validar_rut_afiliado_a_AFP_Capital {
     public void ejecutarBrowser() {
         tools = new tools();
         try {
-            tools.setUrl("https://qa.apiafp.capital/");
+            tools.setUrl("https://ventasdesarrolloafp.com/");
             tools.init();
             System.out.println("Se ejecuto el ChromeDriver e inicia el proceso de ejecución");
             tools.screenshot("scripts", Caso , _method);
@@ -101,7 +101,7 @@ public class caso0003_Validar_rut_afiliado_a_AFP_Capital {
                 System.out.println("Pasamos al paso 3");
                 Thread.sleep(1000);
                 tools.screenshot("scripts", Caso , _method);
-                objIndex.textRut.sendKeys(variables.rutAFPcapital);
+                objIndex.textRut.sendKeys(variables.rutCapital);
                 Thread.sleep(2000);
             } catch (Exception e) {
                 continuar = false;

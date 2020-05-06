@@ -17,12 +17,17 @@ import java.util.List;
 
 public class variables {
 	
-	public String rutcliente = "100300540";
+	public String rut_virtual = "8570573-3";
+	public String rut_crear_clave = "20833010-1";
+	public String rutcliente = "122152731";
 	public String rutNovigente = "25684717-5";
 	public String rutNoAfiliado ="23809938-2";
 	public String rutAFPuno = "27315974-6";
-	public String rutAFPcapital = "7.575.480-9";
-	public String passCliente = "123456";
+	public String rutCapital = "17002627-6";
+	public String rutLead = "259809266";
+	public String rutLyn="26104397-1";
+	public String passCliente = "traspaso15";
+	public String rut = "25684717-5";
 	
 	public String telefono = "945529566";
 	public String email = "yohag07@gmail.com";

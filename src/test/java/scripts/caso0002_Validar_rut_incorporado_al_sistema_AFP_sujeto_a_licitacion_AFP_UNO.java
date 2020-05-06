@@ -38,7 +38,7 @@ public class caso0002_Validar_rut_incorporado_al_sistema_AFP_sujeto_a_licitacion
     public void ejecutarBrowser() {
         tools = new tools();
         try {
-            tools.setUrl("https://qa.apiafp.capital/");
+            tools.setUrl("https://ventasdesarrolloafp.com/");
             tools.init();
             System.out.println("Se ejecuto el ChromeDriver e inicia el proceso de ejecución");
             tools.screenshot("scripts", Caso , _method);

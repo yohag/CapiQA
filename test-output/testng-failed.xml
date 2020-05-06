@@ -5,19 +5,11 @@
     <classes>
       <class name="scripts.caso001_Flujo_Completo">
         <methods>
-          <include name="ingresarRut"/>
-          <include name="comenzar"/>
+          <include name="EleccionFondo"/>
+          <include name="comisiones"/>
           <include name="cerrarBrowser"/>
           <include name="actualizarEmail"/>
-          <include name="confirmar"/>
-          <include name="ingresoManual"/>
-          <include name="ContinuarPass"/>
-          <include name="comisiones"/>
-          <include name="ingresarPassword"/>
-          <include name="fondoRecomendado"/>
           <include name="ContinuarFondo"/>
-          <include name="ContinuarRut"/>
-          <include name="ContinuarEleccion"/>
           <include name="actualizarTelefono"/>
           <include name="ejecutarBrowser"/>
         </methods>
